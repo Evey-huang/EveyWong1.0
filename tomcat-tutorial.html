@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tomcat安装及配置教程</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+   
+</head>
+<body class="home-template">
+	<nav class="main-navigation">
+	   <div class="container">
+            <div class="row">
+            	<div class="col-sm-12">
+            		<div class="collapse navbar-collapse" id="main-menu">
+            			<ul class="menu">
+						    <li  role="presentation"><a href="index.html">首页</a></li>
+						    <li   role="presentation"><a href="essay.html">干货</a></li>
+						    <li  role="presentation"><a href="reading.html">读书</a></li>
+						    <li  class="nav-current" role="presentation"><a href="#">教程</a></li>
+						    <li  role="presentation"><a href="about_author.html" >关于</a></li>
+						</ul>   
+            		</div>
+            	</div>
+            </div>
+	   </div>
+	</nav>
+
+	<section class="content-wrap">
+        <div class="container">
+           <div class="row">
+           <main class="col-md-8 main-content"><!-- 使文章向左排列 -->
+           	<article id=69 class="post">
+			    <header class="post-head">
+			        <h1 class="post-title"><a href="tomcat-tutorial.html">Tomcat安装及配置教程</a></h1>
+			        <section class="post-meta">
+			            <span class="author">作者：<a href="about_author.html">EveyWong</a></span> &bull;
+			            <time class="post-date" datetime="2016年11月27日星期日早上8点05分" title="2016年11月27日星期日早上8点05分">2016年11月27日</time>
+			        </section>
+			    </header>
+			    <section class="featured-media">
+			        <img src="img/Tomcat_home.png" alt="Tomcat安装及配置教程"></a>
+			    </section> 
+			   
+			    <section class="post-content">
+			        <p>Tomcat 服务器是一个免费的开放源代码的Web 应用服务器，属于轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用，是开发和调试JSP 程序的首选。<br>很多初学者在安装Tomcat的时候会遇到闪退的问题。</p>
+			        <p>以下是我个人安装Tomcat时遇到闪退问题的解决方案，希望可以帮助到你。</p>
+			        <h2>下载Tomcat</h2>
+			        <p>
+			        1、到官网下载一个Tomcat。
+			        <a href="http://tomcat.apache.org/">http://tomcat.apache.org/</a>在Download中选择一个版本，这里我选择的是Tomcat7.
+			        <a href="http://tomcat.apache.org/"><img src="img/Tomcat_1.jpg"></a><br>
+			        2、点击Tomcat7，往下拉找到Core,选择自己需要的安装包，我是64位，所以选择的第4个。
+			        <a href="http://tomcat.apache.org/download-70.cgi"><img src="img/Tomcat_2.jpg"></a>
+			        3、下载到本地是可以直接使用的不需要安装。然后就是环境变量的配置。
+			        </p>
+			        <h2>环境变量的配置</h2>
+			        <p>4、环境变量的配置。我的电脑<i class="fa fa-arrow-right"></i>（右键）属性<i class="fa fa-arrow-right"></i>高级系统设置<i class="fa fa-arrow-right"></i>环境变量<i class="fa fa-arrow-right"></i>在系统变量中新建一个名为CATALINA_HOME的变量，值为你存放Tomcat的路径，这里我是放在D:\apache-tomcat-7.0.65，然后确定就配置好了<img src="img/Tomcat_3.jpg"><br><img src="img/Tomcat_4.jpg"><br><img src="img/Tomcat_5.jpg"><br><img src="img/Tomcat_6.jpg"><br><img src="img/Tomcat_7.jpg"></p>
+			        <h2>验证是否成功</h2>
+			        <p>
+			        5、在Tomcat目录下找到bin文件中的startup.bat，双击运行。（注意！请不要关闭启动窗口）然后在浏览器中输入：http://localhost:8080/，如果出现以下界面则表示环境配置成功，可以使用Tomcat了。<img src="img/Tomcat_8.jpg"><br><img src="img/Tomcat_9.jpg"><br><img src="img/Tomcat_10.jpg"></p>
+			        <h2>出现异常</h2>
+			        <p>6、如果运行startup出现闪退情况，以下方法可以帮助你解决问题，<br><br>
+			        （1）找不到JRE也就是说JDK环境没配置好。
+                       我们首先windows+r打开cmd命令窗口，输入java命令，测试JDK是否安装，如果显示一大堆关于java的提示则表明已经安装好了。<img src="img/Tomcat_11.jpg">然后再测试JDK环境变量是否配置好，在cmd中输入javac命令，如果显示“javac不是内部或外部指令，也不是可运行的程序”，则环境变量未配置好；
+                       JDK环境变量的设置：我的电脑<i class="fa fa-arrow-right"></i>（右键）属性<i class="fa fa-arrow-right"></i>高级系统设置<i class="fa fa-arrow-right"></i>环境变量
+                       在系统变量中新建一个变量名为JAVA_HOME,值为D:\Java\jdk1.8.0_60<img src="img/Tomcat_12.jpg"><br>新建另一个变量名为path，值为%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps
+                       <img src="img/Tomcat_13.jpg"><br>再新建一个变量名为classpath，值为.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;<img src="img/Tomcat_14.jpg"><br>
+                       按确定，然后在cmd命令窗口中输入javac，若出现以下界面则表明配置成功。<img src="img/Tomcat_15.jpg"><br>
+                      （2）	在启动Tomcat时需要读取环境变量和配置信息，缺少了这些信息就不能登记环境变量，导致Tomcat闪退。解决办法：
+							在已解压的Tomcat的bin文件夹下找到startup.bat，右键编辑，在文件头两行添加
+							SET JAVA_HOME=D:\Java\jdk1.6.0_10 （java jdk目录）
+							SET TOMCAT_HOME=E:\tomcat-6.0.35 （解压后的tomcat文件目录）
+							同样的，在bin文件夹下的shutdown.bat头两行添加
+							SET JAVA_HOME=D:\Java\jdk1.6.0_10 （java jdk目录）
+							SET TOMCAT_HOME=E:\tomcat-6.0.35 （解压后的tomcat文件目录）
+                    </p>
+			   </section>
+        </main>
+        <aside class="col-md-4 sidebar">
+        	<div class="widget">
+				<h4 class="title">社区</h4>
+				<div class="content community">
+					<!-- <p>QQ群：462694081</p> -->
+					<p>
+						<a href="#" title="Laravel中文网问答社区" target="_blank" onclick="_hmt.push(['_trackEvent', 'big-button', 'click', '问答社区'])">
+						<i class="fa fa-comments"></i> 问答社区</a>
+					</p>
+				</div>
+            </div>
+            <!-- <div class="widget">
+				<h4 class="title">下载</h4>
+				<div class="content download">
+					<a href="#" class="btn btn-default btn-block" onclick="_hmt.push(['_trackEvent', 'big-button', 'click', '下载 Laravel & Lumen'])">Laravel &amp; Lumen 一键安装包下载</a>
+				</div>
+			</div> -->
+			<div class="widget">
+				<h4 class="title">标签云</h4>
+				<div class="content tag-cloud">
+					<a href="#">Laravel</a>
+					<a href="#">PHP</a>
+					<a href="#">Bootstrap</a>
+					<a href="#">HTML5</a>
+					<a href="#">CSS3</a>
+					<a href="#">JavaScript</a>
+					<a href="#">jQuery</a>
+					<a href="#">电影</a>
+					<a href="#">音乐</a>
+					<a href="#">安装教程</a>
+					<a href="#">安装包</a>
+					<a href="#">前端框架</a>
+					<a href="#">...</a>
+				</div>
+			</div>
+        </aside>
+
+           </div>
+        </div>
+    </section>       
+
+	<footer class="main-footer">
+		<div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                	<div class="widget">
+                		<h4 class="title">最新文章</h4>
+                		<div class="content recent-post">
+                			<div class="recent-single-post">
+                                <a href="#" class="post-title">我的个人网站正式上线啦</a>
+                                <div class="date">2016年11月26日</div>
+                            </div>
+                            <div class="recent-single-post">
+                                <a href="#" class="post-title">Tomcat安装及配置教程</a>
+                                <div class="date">2016年11月27日</div>
+                            </div>
+                            <div class="recent-single-post">
+                                <a href="#" class="post-title">Laravel 五岁了</a>
+                                <div class="date">2016年6月12日</div>
+                            </div>
+
+                		</div><!-- content recent-post结束 -->
+                	</div><!-- widget结束 -->
+                </div><!-- col-sm-4结束 -->
+                <div class="col-sm-4">
+                    <div class="widget">
+                        <h4 class="title">标签云</h4>
+                        <div class="content tag-cloud">
+                            <a href="#">Laravel</a>
+							<a href="#">PHP</a>
+							<a href="#">Bootstrap</a>
+							<a href="#">HTML5</a>
+							<a href="#">CSS3</a>
+							<a href="#">JavaScript</a>
+							<a href="#">jQuery</a>
+							<a href="#">电影</a>
+							<a href="#">音乐</a>
+							<a href="#">安装教程</a>
+							<a href="#">安装包</a>
+							<a href="#">前端框架</a>
+                            <a href="/tag-cloud/">...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="widget">
+                        <h4 class="title">相关链接</h4>
+                        <div class="content tag-cloud friend-links">
+                            <a href="http://www.bootcss.com" title="Bootstrap中文网" onclick="_hmt.push(['_trackEvent', 'link', 'click', 'bootcsscom'])" target="_blank">Bootstrap中文网</a>
+                            <a href="http://getbootstrap.com/" title="Bootstrap英文网" onclick="_hmt.push(['_trackEvent', 'link', 'click', 'bootcsscom'])" target="_blank">Bootstrap英文网</a>
+                            <a href="https://www.zhihu.com/" title="知乎" onclick="_hmt.push(['_trackEvent', 'link', 'click', 'bootcdncn'])" target="_blank">知乎</a>
+                            <a href="http://www.imooc.com/" title="慕课网" onclick="_hmt.push(['_trackEvent', 'link', 'click', 'gruntjsnet'])" target="_blank">慕课网</a>
+                            <a href="http://www.jikexueyuan.com/" title="极客学院" onclick="_hmt.push(['_trackEvent', 'link', 'click', 'gulpjscomcn'])" target="_blank">极客学院</a>
+                            <hr>
+                            <a href="http://www.iconfont.cn/plus" title="Iconfont" onclick="_hmt.push(['_trackEvent', 'link', 'click', 'lodashjscom'])" target="_blank">Iconfont</a>
+                            <a href="http://www.jquery123.com/" title="jQuery中文文档" onclick="_hmt.push(['_trackEvent', 'link', 'click', 'jquery123com'])" target="_blank">jQuery中文文档</a>
+                            <hr>
+                            <a href="https://www.lagou.com/" title="拉勾网" onclick="_hmt.push(['_trackEvent', 'link', 'click', 'upyun'])" target="_blank">拉勾网</a>
+                            <a href="https://www.aliyun.com/" title="阿里云" onclick="_hmt.push(['_trackEvent', 'link', 'click', 'ucloud'])" target="_blank">阿里云</a>
+                            <a href="http://www.lecloud.com/" title="乐视云" onclick="_hmt.push(['_trackEvent', 'link', 'click', 'lecloud'])" target="_blank">乐视云</a>
+                        </div>
+                </div></div>
+            </div><!-- row结束 -->
+        </div><!-- container结束 -->
+	</footer>
+	<div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <span>Copyright &copy; <a href="#">Evey Wong</a></span> |
+                    <span>2016-2017</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+ </body>
+</html>

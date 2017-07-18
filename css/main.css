@@ -1,0 +1,498 @@
+html,
+body 
+{
+  color: #505050;
+  line-height: 1.75em;
+  background: #ebebeb;
+  position: relative;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3",
+   "WenQuanYi Micro Hei", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 
+{
+  font-weight: 400;
+  color: #303030;
+}
+
+h1 
+{
+  font-size: 3em;
+}
+
+h2 
+{
+  font-size: 2.5em;
+}
+
+h3 
+{
+  font-size: 2em;
+}
+
+h4 
+{
+  font-size: 1.5em;
+}
+
+h5 
+{
+  font-size: 1em;
+}
+
+h6 
+{
+  font-size: 0.75em;
+}
+
+a 
+{
+  color: #f4645f;
+  outline: none;
+}
+
+a:hover {
+  color: #f4645f;
+}
+
+a:active,a:focus,a img
+{
+  outline: none;
+}
+
+/*header*/
+
+/*.main-header 
+{
+  text-align: center;
+  padding: 42px 0;
+  background: #f4645f;
+}
+
+.main-header h1,.main-header h2
+{
+  color: #fff;
+}
+
+.home-template .main-header 
+{
+  padding-top: 62px;
+  padding-bottom: 62px;
+  background-repeat: no-repeat;
+  background-position: center 20%;
+  -webkit-background-size: cover;
+  background-size: cover;
+}*/
+
+/* main-navigation */
+
+.main-navigation 
+{
+  text-align: center;
+  background: #ffffff;
+  border-top: 1px solid #ebebeb;
+  margin-bottom: 35px;
+  border-bottom: 2px solid #e1e1e1;
+}
+
+.main-navigation .menu 
+{
+  padding: 0;
+  margin: 0;
+}
+
+.main-navigation .menu li 
+{
+  list-style: none;
+  display: inline-block;
+  position: relative;
+}
+
+.main-navigation .menu li.nav-current 
+{
+  border-bottom: 2px solid #f4645f;
+  margin-bottom: -2px;
+}
+
+.main-navigation .menu li a 
+{
+  color: #505050;
+  line-height: 4em;
+  display: block;
+  padding: 0 21px;
+}
+
+.main-navigation .menu li:hover > a 
+{
+  color: #f4645f;
+  text-decoration: none;
+}
+
+/*post*/
+
+.post
+{
+	background: #fff;
+	padding:35px;
+	margin-bottom: 35px;
+	position: relative;
+	overflow: hidden;/*继承父高度*/
+}
+
+.post .post-head /*标题居中显示*/
+{
+  text-align: center;
+}
+
+.post .post-head .post-title 
+{
+  margin: 0;
+  font-size: 2.0em;
+  line-height: 1.2em;
+}
+
+.post .post-head .post-title a /*标题颜色*/
+{
+  color: #303030;
+}
+
+
+.post .post-head .post-title a:hover,.post .post-head .post-title a:focus
+{
+  text-decoration: none;
+}
+
+.post .post-head .post-meta 
+{
+  color: #959595;
+  margin: 14px 0 0px;
+}
+
+.post .post-head .post-meta span 
+{
+  margin: 0px 7px;
+  white-space: nowrap;
+}
+
+.post .featured-media 
+{
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.post .featured-media img 
+{
+  width: 100%;
+}
+
+.post .post-content /*文章内容样式*/
+{
+  margin: 30px 0;
+}
+
+.post .post-footer /*文章末尾分割线*/
+{
+  margin-top: 30px;
+  border-top: 1px solid #ebebeb;
+  padding: 21px 0 0;
+}
+
+.post .post-footer .tag-list /*还不知道是干嘛的*/
+{
+  color: #959595;
+  line-height: 28px;
+}
+
+.post .post-footer .tag-list a 
+{
+  color: #959595;
+  margin-left: 7px;
+}
+
+.post .post-footer .tag-list a:hover 
+{
+  color: #f4645f;
+}
+
+/* post content */
+
+.post-content {
+  font: 400 18px/1.62 "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+  color: #444443;
+}
+
+.post-content h1,.post-content h2,.post-content h3,.post-content h4,.post-content h5,.post-content h6
+{
+  font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
+  color: #222223;
+}
+
+.post-content p 
+{
+  margin-top: 0;
+  margin-bottom: 1.46em;
+}
+
+.post-content a img 
+{
+  /* Remove border on IE */
+  border: none;
+}
+
+.post-content img 
+{
+  max-width: 100%;
+  height: auto;
+  margin: 0.2em 0;
+}
+
+.btn-default
+{
+	background: #f4645f;
+	color: #fff;
+}
+
+.post-permalink a:hover
+{
+	background: #333;
+	color: #fff;
+}
+
+.download a:hover
+{
+	background: #333;
+	color: #fff;
+}
+
+/* pagination */
+
+.pagination 
+{
+  margin: 0 0 35px;
+  text-align: center;
+  display: block;
+}
+
+.pagination a /*小箭头*/
+{
+  text-align: center;
+  display: inline-block;
+  color: #ffffff;
+  background: #f4645f;
+  border-radius: 2px;
+}
+
+.pagination a a:hover 
+{
+  background: #505050;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.pagination a i 
+{
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+}
+
+.pagination .page-number /*页数*/
+{
+  background: #f4645f;
+  color: #ffffff;
+  margin: 0 3px;
+  display: inline-block;
+  line-height: 36px;
+  padding: 0 14px;
+  border-radius: 2px;
+}
+
+/*sidebar*/
+
+.sidebar .widget 
+{
+  background: #ffffff;
+  padding: 21px 30px;
+}
+
+.main-footer .widget 
+{
+  padding: 0px 30px;
+}
+
+.widget /*各区域分开*/
+{
+  margin-bottom: 35px;
+}
+
+.widget .title 
+{
+  margin-top: 0;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: 21px;
+  position: relative;
+}
+
+.widget .title:after /*使Title高亮*/
+{
+  content: "";
+  width: 90px;
+  height: 1px;
+  background: #f4645f;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+}
+
+.widget .tag-cloud a 
+{
+  border: 1px solid #ebebeb;
+  padding: 2px 7px;
+  color: #959595;
+  line-height: 1.5em;
+  display: inline-block;
+  margin: 0 7px 7px 0;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.widget .tag-cloud a:hover /*siderbar标签云样式*/
+{
+  color: #ffffff;
+  background: #f4645f;
+  border: 1px solid #f4645f;
+  text-decoration: none;
+}
+
+/*footer*/
+
+.main-footer 
+{
+  background: #202020;
+  padding: 35px 0 0;
+  color: #959595;
+}
+
+.main-footer .widget .title /*最新文章、标签云、相关链接等你Title的样式*/
+{
+  color: #ffffff;
+  border-bottom: 1px solid #303030;
+}
+
+.main-footer .widget .tag-cloud a /*标签云的样式*/
+{
+  border: 1px solid #303030;
+ 
+}
+
+.widget .tag-cloud a 
+{
+  color: #959595;
+  padding:2px 7px;
+  line-height: 1.5em;
+  display: inline-block;
+  margin: 0 7px 7px 0;/*调整块之间的间距*/
+  transition: all 0.2 ease;
+  text-decoration: none;
+}
+
+.main-footer .widget .tag-cloud a:hover /*标签云和相关链接样式，点击高亮*/
+{
+  border: 1px solid #f4645f;
+  background-color: #f4645f;
+  color: #fff;
+  outline: none;
+}
+
+.main-footer .widget .friend-links a /*去掉相关链接中的边框*/
+{
+  border: none;
+}
+
+.main-footer .widget .friend-links hr /*相关链接的下边框样式*/
+{
+  margin: 1em 0;
+  border-top: 1px dashed #303030;
+}
+
+.main-footer .widget .recent-post .recent-single-post /*最新文章部分的虚线下边框*/
+{
+  border-bottom: 1px dashed #303030;
+}
+
+.main-footer .widget .recent-post .recent-single-post a
+{
+	text-decoration: none;
+}
+
+.main-footer .widget .recent-post .recent-single-post a:hover
+{
+	color: #f4645f;
+}
+.main-footer .widget .recent-post .recent-single-post .post-title /*文章标题颜色*/
+{
+  color: #959595;
+}
+
+.main-footer .widget .recent-post .recent-single-post .date /*最新文章下时间的样式*/
+{
+  color: #505050;
+}
+
+.copyright 
+{
+  background: #111;
+  font-size: 13px;
+  text-align: center;
+  color: #555555;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  border-top: 1px solid #303030;
+}
+
+.copyright span 
+{
+  margin: 0 .5em;
+}
+
+.copyright a 
+{
+  color: #555555;
+}
+
+/*about author page*/
+.img_about img
+{
+  display:block;/*img为内联元素，把内联变成块级元素后居中显示*/
+  margin: 0 auto;
+}
+
+.m-about
+{
+  text-align: center;
+}
+
+.about_post
+{
+  margin-left:200px;
+  margin-right:200px;
+}
+
+.about_bg
+{
+
+    background-color: #0a0810;
+}
+
+.essay_list li 
+{
+  list-style-type: none;
+  
+}
